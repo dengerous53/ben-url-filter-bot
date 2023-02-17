@@ -810,7 +810,7 @@ async def deletemultiplefiles(bot, message):
 async def shortlink(bot, message):
     chat_type = message.chat.type
     if chat_type == enums.ChatType.PRIVATE:
-        return await message.reply_text(f"<b>Hey {message.from_user.mention}, This command only works on groups !\n\nFormat (Try in Group Only): /shortlink ""{shotener_website} {shortener_api}\n\n(If You Are New? Let me tell\n\nUsing Shorteners We can Earn Money, You can use our shortener, that we are Using\n\nWebsite Link -</b> https://bit.ly/shorturllink)\n\n<b>Add Bot To Your Grp as Admin And Try this Command\n\nIf you still didn't get it, You Can Contact Us - @TeamHMT_bot\n\n(Puriyala na intha bot la message pannunga - @TeamHMT_bot)</b>")
+        return await message.reply_text(f"<b>Hey {message.from_user.mention}, This command only works on groups !\n\nFormat (Try in Group Only): /shortlink ""{shotener_website} {shortener_api}\n\n(If You Are New? Let me tell...\n\nUsing Shorteners We Can Earn Money, You Can Use Our Shortener, That We Are Using\n\nWebsite Link -</b> https://bit.ly/shorturllink)\n\n<b>Add Bot To Your Grp as Admin And Try this Command\n\nIf you still didn't get it, You Can Contact Us - @TeamHMT_bot\n\n(Puriyala na intha bot la message pannunga - @TeamHMT_bot)</b>")
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         grpid = message.chat.id
         title = message.chat.title
@@ -820,7 +820,7 @@ async def shortlink(bot, message):
     userid = message.from_user.id
     user = await bot.get_chat_member(grpid, userid)
     if user.status != enums.ChatMemberStatus.ADMINISTRATOR and user.status != enums.ChatMemberStatus.OWNER and str(userid) not in ADMINS:
-        return await message.reply_text("<b>You don't have access to use this command!\n\nAdd bot to your Own Group as Admin and Try this command\n\nFor More PM me with this Command</b>")
+        return await message.reply_text("<b>You don't have access to use this command!\n\nAdd Me to Your Own Group as Admin and Try This Command\n\nFor More PM Me With This Command</b>")
     else:
         pass
     try:
